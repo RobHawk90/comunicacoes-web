@@ -9,21 +9,21 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.example.models.User;
+import com.example.models.Usuario;
 
 @Path("/user")
 @Produces(MediaType.APPLICATION_JSON)
 public class UserService {
 
 	@GET
-	public User add() {
+	public Usuario add() {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("test");
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 
 		transaction.begin();
 
-		User user = new User();
+		Usuario user = new Usuario();
 		user.setNome("master");
 		user.setSenha("padrao");
 		manager.persist(user);
