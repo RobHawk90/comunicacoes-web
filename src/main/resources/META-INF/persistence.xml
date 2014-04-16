@@ -11,7 +11,7 @@
 
 		<properties>
 			<property name="hibernate.connection.url"
-				value="jdbc:postgresql://localhost:5432/d2hdjpc1t4jngl" />
+				value="jdbc:postgresql://ec2-107-21-100-118.compute-1.amazonaws.com:5432/d2hdjpc1t4jngl" />
 			<property name="hibernate.connection.username" value="phxbfubqgnjeix" />
 			<property name="hibernate.connection.password" value="F1U7gK5OJYm38xW1G59o81jt4_" />
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
