@@ -16,10 +16,11 @@ import br.robhawk.java.comunicacoes.models.Usuario;
 @Consumes(MediaType.APPLICATION_JSON)
 public class UsuarioServices {
 
+	UsuarioDao dao = new UsuarioDao();
+	
 	@POST
 	@Path("/login")
 	public Response login(Usuario usuario) {
-		UsuarioDao dao = new UsuarioDao();
 
 		if (dao.login(usuario))
 			return Response.ok().entity(usuario).build();
@@ -30,10 +31,11 @@ public class UsuarioServices {
 	@GET
 	@Path("/addMasterUser")
 	public Usuario addMasterUser() {
-		UsuarioDao dao = new UsuarioDao();
 		Usuario usuario = new Usuario();
+		
 		usuario.setNome("master");
 		usuario.setSenha("padrao");
+		
 		dao.insert(usuario);
 
 		return usuario;
