@@ -64,6 +64,6 @@ public class UsuarioDao implements Dao<Usuario> {
 				"SELECT u FROM Usuario u WHERE u.nome = :nome AND u.senha = :senha", Usuario.class);
 		query.setParameter("nome", usuario.getNome()).setParameter("senha", usuario.getSenha());
 
-		return query.getSingleResult() != null;
+		return query.getResultList().size() == 1;
 	}
 }

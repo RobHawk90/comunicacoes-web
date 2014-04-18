@@ -3,7 +3,8 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-	<persistence-unit name="comunicacoes" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="comunicacoes"
+		transaction-type="RESOURCE_LOCAL">
 		<description>
 			Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
 		</description>
@@ -16,7 +17,7 @@
 			<property name="hibernate.connection.password" value="F1U7gK5OJYm38xW1G59o81jt4_" />
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
 
