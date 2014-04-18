@@ -1,4 +1,4 @@
-package com.example.models;
+package br.robhawk.java.comunicacoes.models;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Calendar;

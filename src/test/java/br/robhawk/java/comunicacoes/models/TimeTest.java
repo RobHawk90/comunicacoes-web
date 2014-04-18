@@ -1,6 +1,8 @@
-package com.example.models;
+package br.robhawk.java.comunicacoes.models;
 
 import org.junit.Test;
+
+import br.robhawk.java.comunicacoes.models.Time;
 
 import java.util.TimeZone;
 

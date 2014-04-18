@@ -1,6 +1,6 @@
-package com.example.services;
+package br.robhawk.java.comunicacoes.services;
 
-import com.example.models.Time;
+import br.robhawk.java.comunicacoes.models.Time;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
