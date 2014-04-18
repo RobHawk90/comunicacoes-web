@@ -62,6 +62,7 @@ public class UsuarioDao implements Dao<Usuario> {
 		manager.getTransaction().begin();
 		TypedQuery<Usuario> query = manager.createQuery(
 				"SELECT u FROM Usuario u WHERE nome = :nome AND senha = :senha", Usuario.class);
+		query.setParameter("nome", usuario.getNome()).setParameter("senha", usuario.getSenha());
 
 		return query.getSingleResult() != null;
 	}
