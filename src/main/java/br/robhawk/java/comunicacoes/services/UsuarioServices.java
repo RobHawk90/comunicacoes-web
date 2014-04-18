@@ -1,6 +1,7 @@
 package br.robhawk.java.comunicacoes.services;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -24,5 +25,17 @@ public class UsuarioServices {
 			return Response.ok().entity(usuario).build();
 		else
 			return Response.status(401).entity(usuario).build();
+	}
+
+	@GET
+	@Path("/addMasterUser")
+	public Usuario addMasterUser() {
+		UsuarioDao dao = new UsuarioDao();
+		Usuario usuario = new Usuario();
+		usuario.setNome("master");
+		usuario.setSenha("padrao");
+		dao.insert(usuario);
+
+		return usuario;
 	}
 }
